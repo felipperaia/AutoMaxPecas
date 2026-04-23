@@ -79,8 +79,7 @@ function initForm() {
       `E-mail: ${data.email}`,
       `Veículo: ${data.vehicle || 'Não informado'}`,
       `Detalhes: ${data.message}`,
-    ].join('
-');
+    ].join('\n');
 
     note.textContent = 'Abrindo conversa no WhatsApp...';
     note.className = 'form-note success';
