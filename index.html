@@ -2,19 +2,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoMax Peças | Qualidade e Atendimento</title>
-  <meta name="description" content="Landing page autoral inspirada em uma loja de autopeças, com WhatsApp, formulário, mapa e navegação completa." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoMax Peças | Peças automotivas e atendimento rápido</title>
+  <meta name="description" content="AutoMax Peças — landing page comercial pronta para gerar orçamentos via WhatsApp." />
+  <!-- Google Fonts: Inter for legibilidade -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome para ícones leves via CDN (escolha por compatibilidade e peso) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar" role="banner">
     <div class="container topbar-inner">
-      <a href="#inicio" class="brand">
+      <a class="brand" href="#inicio">
         <span class="brand-badge">AM</span>
         <div>
           <strong>AutoMax Peças</strong>
@@ -22,17 +23,20 @@
         </div>
       </a>
 
-      <nav class="nav" id="nav">
+      <nav id="nav" class="nav" aria-label="Navegação principal">
         <a href="#inicio">Início</a>
         <a href="#sobre">Sobre</a>
         <a href="#linhas">Linhas</a>
         <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn-outline desktop-only" id="headerWhatsapp" target="_blank" rel="noopener">WhatsApp</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+        <a id="headerWhatsapp" class="btn btn-outline desktop-only" href="#contato" aria-label="Abrir formulário de contato"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Orçamento</a>
+        <a href="tel:+5511999999999" class="btn btn-light mobile-hide" aria-label="Ligar para a loja"><i class="fa-solid fa-phone" aria-hidden="true"></i></a>
+        <button id="menuBtn" class="menu-btn" aria-label="Abrir menu" aria-controls="nav" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -40,75 +44,48 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
+    <section class="hero" id="inicio" aria-label="Início">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Peças automotivas para várias linhas</span>
-          <h1>Atendimento rápido, peças confiáveis e suporte pelo WhatsApp.</h1>
-          <p>
-            Landing page autoral pronta para usar como base local, com seções institucionais,
-            botão flutuante, formulário funcional para WhatsApp e mapa incorporado.
-          </p>
+          <span class="eyebrow">Peças para carros, utilitários e vans</span>
+          <h1>Peças originais e atendimento técnico — orçamento rápido pelo WhatsApp</h1>
+          <p class="lead">Peça orçamento com fotos e descrição. Resposta em minutos, retirada na loja ou envio para todo o Brasil.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" id="heroWhatsapp" target="_blank" rel="noopener">Solicitar orçamento</a>
-            <a class="btn btn-light" href="#contato">Falar agora</a>
+            <a id="heroWhatsapp" class="btn btn-primary" href="#contato" aria-label="Ir para formulário de orçamento">Pedir Orçamento</a>
+            <a class="btn btn-light" href="#contato">Falar com a loja</a>
           </div>
 
           <ul class="hero-points">
-            <li>Atendimento por carro, utilitário e van.</li>
-            <li>Consulta rápida por mensagem.</li>
-            <li>Entrega visual próxima ao modelo de loja local.</li>
+            <li><img class="inline-icon" src="assets/icons/check.svg" alt=""> Estoque atualizado</li>
+            <li><img class="inline-icon" src="assets/icons/truck.svg" alt=""> Envio rápido</li>
+            <li><img class="inline-icon" src="assets/icons/headset.svg" alt=""> Suporte técnico</li>
           </ul>
         </div>
 
-        <div class="hero-card reveal delay-1">
-          <div class="card">
-            <div class="card-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <div class="card-body">
-              <div class="mock-banner">Autopeças • Vans • Utilitários • Nacionais • Importados</div>
-              <div class="mock-grid">
-                <div class="mock-box accent"></div>
-                <div class="mock-box"></div>
-                <div class="mock-box"></div>
-                <div class="mock-box accent"></div>
-              </div>
-              <div class="mock-lines">
-                <span></span><span></span><span></span><span></span>
-              </div>
-            </div>
+        <div class="hero-media reveal delay-1">
+          <figure class="hero-image">
+            <img src="assets/images/hero.svg" alt="Estoque de autopeças" loading="lazy">
+          </figure>
+          <div class="hero-card">
+            <div class="card-row"><strong>+18 anos</strong><span>de experiência</span></div>
+            <div class="card-row"><strong>Atendimento</strong><span>WhatsApp rápido</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="stats">
-      <div class="container stats-grid reveal">
-        <div><strong>+18 anos</strong><span>de mercado</span></div>
-        <div><strong>Atendimento</strong><span>rápido por WhatsApp</span></div>
-        <div><strong>Catálogo</strong><span>para várias linhas</span></div>
-        <div><strong>Loja física</strong><span>com mapa integrado</span></div>
-      </div>
-    </section>
-
-    <section class="section" id="sobre">
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
       <div class="container two-col">
         <div class="reveal">
           <span class="section-tag">Sobre</span>
-          <h2>Uma estrutura pronta para lojas de autopeças e negócios locais.</h2>
-          <p>
-            Este modelo traz a aparência e a jornada comuns de um site institucional moderno:
-            destaque inicial, apresentação da empresa, linhas atendidas, diferenciais, mapa e contato imediato.
-          </p>
+          <h2 id="sobre-title">Uma loja de autopeças com estrutura profissional</h2>
+          <p>Atendemos frotas, oficinas e clientes finais com peças para manutenção, suspensão, freios e elétrica. Equipe técnica e estoque local preparado para retirada imediata.</p>
+          <a class="btn btn-outline" href="#contato">Fale com um especialista</a>
         </div>
         <div class="feature-panel reveal delay-1">
-          <div class="feature-item"><strong>Layout responsivo</strong><span>Funciona no desktop e no celular.</span></div>
-          <div class="feature-item"><strong>CTA direto</strong><span>Botões com mensagem pré-preenchida.</span></div>
-          <div class="feature-item"><strong>Mapa embutido</strong><span>Iframe com endereço configurável.</span></div>
-          <div class="feature-item"><strong>Formulário</strong><span>Validação no navegador e envio para WhatsApp.</span></div>
+          <div class="feature-item"><i class="fa-solid fa-certificate"></i><strong>Peças com garantia</strong><span>Fornecedores confiáveis e nota fiscal.</span></div>
+          <div class="feature-item"><i class="fa-solid fa-wrench"></i><strong>Assistência técnica</strong><span>Orientação técnica para instalação e compatibilidade.</span></div>
+          <div class="feature-item"><i class="fa-solid fa-map-marker-alt"></i><strong>Retirada na loja</strong><span>Endereço central com facilidade de acesso.</span></div>
         </div>
       </div>
     </section>
@@ -117,15 +94,15 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Linhas atendidas</span>
-          <h2>Monte aqui exatamente as categorias que o seu cliente vende.</h2>
+          <h2>Peças para todas as aplicações</h2>
         </div>
-        <div class="cards-grid">
-          <article class="info-card reveal"><h3>Nacionais</h3><p>Peças de manutenção, suspensão, freio e motor.</p></article>
-          <article class="info-card reveal delay-1"><h3>Importados</h3><p>Estrutura pronta para destacar marcas e especialidades.</p></article>
-          <article class="info-card reveal delay-2"><h3>Vans</h3><p>Seção voltada para utilitários e veículos de trabalho.</p></article>
-          <article class="info-card reveal"><h3>Utilitários</h3><p>Espaço para destacar aplicações e atendimento técnico.</p></article>
-          <article class="info-card reveal delay-1"><h3>Elétrica</h3><p>Adapte para baterias, lâmpadas, chicotes e sensores.</p></article>
-          <article class="info-card reveal delay-2"><h3>Motor</h3><p>Bloco, arrefecimento, filtros, juntas e acessórios.</p></article>
+        <div class="cards-grid reveal">
+          <article class="info-card"><img class="icon-img" src="assets/icons/gear.svg" alt="Ícone: nacionais"><h3>Nacionais</h3><p>Peças de manutenção, freio, suspensão e motor.</p></article>
+          <article class="info-card"><img class="icon-img" src="assets/icons/globe.svg" alt="Ícone: importados"><h3>Importados</h3><p>Componentes de reposição para modelos importados.</p></article>
+          <article class="info-card"><img class="icon-img" src="assets/icons/van.svg" alt="Ícone: vans"><h3>Vans</h3><p>Soluções para utilitários e transporte leve.</p></article>
+          <article class="info-card"><img class="icon-img" src="assets/icons/truck.svg" alt="Ícone: utilitários"><h3>Utilitários</h3><p>Peças para veículos de carga leve.</p></article>
+          <article class="info-card"><img class="icon-img" src="assets/icons/bolt.svg" alt="Ícone: elétrica"><h3>Elétrica</h3><p>Baterias, alternadores, sensores e lâmpadas.</p></article>
+          <article class="info-card"><img class="icon-img" src="assets/icons/database.svg" alt="Ícone: motor"><h3>Motor</h3><p>Filtros, juntas, bombas e componentes principais.</p></article>
         </div>
       </div>
     </section>
@@ -134,12 +111,63 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Diferenciais</span>
-          <h2>Mesmo fluxo que o cliente espera encontrar em uma página comercial.</h2>
+          <h2>Por que escolher a AutoMax</h2>
         </div>
-        <div class="benefits-grid">
-          <div class="benefit reveal"><span>01</span><h3>Resposta rápida</h3><p>Botões levam o usuário direto para conversa no WhatsApp.</p></div>
-          <div class="benefit reveal delay-1"><span>02</span><h3>Leitura simples</h3><p>Seções curtas e objetivas para captar orçamento.</p></div>
-          <div class="benefit reveal delay-2"><span>03</span><h3>Mapa local</h3><p>Ajuda a mostrar endereço físico e gerar confiança.</p></div>
+        <div class="benefits-grid reveal">
+          <div class="benefit"><span>01</span><h3>Resposta em minutos</h3><p>Atendimento via WhatsApp com fotos e informações técnicas.</p></div>
+          <div class="benefit"><span>02</span><h3>Peças genuínas</h3><p>Trabalhamos com marcas consolidadas e garantia.</p></div>
+          <div class="benefit"><span>03</span><h3>Retirada rápida</h3><p>Agilidade para clientes que precisam da peça hoje.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">Depoimentos</span>
+          <h2 id="depoimentos-title">Clientes satisfeitos</h2>
+        </div>
+
+        <div class="testimonials reveal">
+          <button class="slider-btn prev" aria-label="Depoimentos anteriores"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="slider-track">
+            <blockquote class="slide active">
+              <p>"Excelente atendimento. Encontrei a peça certa em minutos e retirei no mesmo dia."</p>
+              <footer><strong>Marcos Silva</strong><span>Oficina Silva & Filhos</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <p>"Equipe técnica ajudou a confirmar compatibilidade do componente."</p>
+              <footer><strong>Ana Rodrigues</strong><span>Frota Serviços</span></footer>
+            </blockquote>
+            <blockquote class="slide">
+              <p>"Preço justo e entrega rápida. Recomendo para oficinas da região."</p>
+              <footer><strong>Paulo Souza</strong><span>AutoCenter RJ</span></footer>
+            </blockquote>
+          </div>
+          <button class="slider-btn next" aria-label="Próximos depoimentos"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag">FAQ</span>
+          <h2>Perguntas frequentes</h2>
+        </div>
+        <div class="faq-grid reveal">
+          <details>
+            <summary>Como faço para solicitar um orçamento?</summary>
+            <p>Preencha o formulário com a descrição da peça e envie — abriremos o WhatsApp com a mensagem pronta.</p>
+          </details>
+          <details>
+            <summary>Vocês enviam para todo o Brasil?</summary>
+            <p>Sim — oferecemos opções de envio pelos Correios e transportadoras parceiras.</p>
+          </details>
+          <details>
+            <summary>Posso retirar a peça na loja?</summary>
+            <p>Sim — agende retirada e pague no balcão.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -148,11 +176,11 @@
       <div class="container contact-grid">
         <div class="contact-copy reveal">
           <span class="section-tag">Contato</span>
-          <h2>Peça um orçamento pela página ou abra a conversa no WhatsApp.</h2>
-          <p>Ao enviar o formulário, o site monta uma mensagem pronta e abre o WhatsApp do número configurado.</p>
+          <h2>Solicite um orçamento — rápido pelo WhatsApp</h2>
+          <p>Preencha o formulário com o máximo de detalhes (código, foto, veículo) para acelerar o atendimento.</p>
 
           <div class="contact-list">
-            <a id="contactWhatsapp" target="_blank" rel="noopener">WhatsApp comercial</a>
+            <p class="muted">Para orçamentos, preencha o formulário ao lado e clique em "Enviar no WhatsApp".</p>
             <a href="tel:+5511999999999">(11) 99999-9999</a>
             <a href="mailto:contato@automaxpecas.com.br">contato@automaxpecas.com.br</a>
             <span>Av. Exemplo, 123 - Centro - São Paulo/SP</span>
@@ -164,30 +192,37 @@
             <div class="field-row">
               <div class="field">
                 <label for="name">Nome</label>
-                <input type="text" id="name" name="name" required minlength="3" placeholder="Seu nome" />
+                <input type="text" id="name" name="name" required minlength="3" placeholder="Seu nome" aria-describedby="nameError" />
+                <div class="field-error" id="nameError" aria-live="polite"></div>
               </div>
               <div class="field">
                 <label for="phone">Telefone</label>
-                <input type="tel" id="phone" name="phone" required minlength="10" placeholder="(00) 00000-0000" />
+                <input type="tel" id="phone" name="phone" required minlength="10" placeholder="(00) 00000-0000" aria-describedby="phoneError" />
+                <div class="field-error" id="phoneError" aria-live="polite"></div>
               </div>
             </div>
+
             <div class="field-row">
               <div class="field">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required placeholder="voce@email.com" />
+                <input type="email" id="email" name="email" required placeholder="voce@email.com" aria-describedby="emailError" />
+                <div class="field-error" id="emailError" aria-live="polite"></div>
               </div>
               <div class="field">
-                <label for="vehicle">Veículo</label>
+                <label for="vehicle">Veículo (opcional)</label>
                 <input type="text" id="vehicle" name="vehicle" placeholder="Ex.: Fiorino 1.4 2018" />
               </div>
             </div>
+
             <div class="field">
-              <label for="message">Peça desejada</label>
-              <textarea id="message" name="message" rows="5" required minlength="8" placeholder="Descreva a peça ou serviço que você procura"></textarea>
+              <label for="message">Peça desejada / detalhes</label>
+              <textarea id="message" name="message" rows="5" required minlength="8" placeholder="Descreva a peça ou encaminhe código/nota" aria-describedby="messageError"></textarea>
+              <div class="field-error" id="messageError" aria-live="polite"></div>
             </div>
+
             <div class="form-actions">
               <button type="submit" class="btn btn-primary btn-block">Enviar no WhatsApp</button>
-              <p class="form-note" id="formNote">Preencha os campos e envie a conversa.</p>
+              <p class="form-note" id="formNote">Preencha e clique para abrir o WhatsApp.</p>
             </div>
           </form>
         </div>
@@ -197,23 +232,18 @@
     <section class="map-section reveal">
       <div class="container">
         <div class="map-wrap">
-          <iframe
-            title="Mapa da loja"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Avenida%20Paulista%2C%201000%2C%20Sao%20Paulo&z=15&output=embed"
-            allowfullscreen>
-          </iframe>
+          <iframe id="mapIframe" title="Mapa da loja" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Avenida%20Paulista%2C%201000%2C%20Sao%20Paulo&z=15&output=embed" allowfullscreen></iframe>
         </div>
       </div>
     </section>
   </main>
 
   <a class="floating-whatsapp" id="floatingWhatsapp" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
-    <span>WhatsApp</span>
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span class="visually-hidden">WhatsApp</span>
   </a>
 
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
       <div>
         <strong>AutoMax Peças</strong>
