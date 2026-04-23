@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" aria-hidden="true">
+  <rect width="1200" height="700" fill="#0b1220" rx="16" />
+  <g transform="translate(80,80)" fill="#fff">
+    <rect x="0" y="0" width="420" height="40" rx="6" fill="#f8fafc" opacity=".06" />
+    <rect x="0" y="80" width="420" height="260" rx="14" fill="#fff" opacity=".04" />
+    <rect x="460" y="20" width="640" height="200" rx="12" fill="#ffecec" opacity=".04" />
+    <g fill="#e6f2ff" transform="translate(10,100)">
+      <rect x="10" y="10" width="120" height="40" rx="10" />
+      <rect x="150" y="10" width="120" height="40" rx="10" />
+      <rect x="290" y="10" width="120" height="40" rx="10" />
+    </g>
+  </g>
+</svg>
